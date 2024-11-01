@@ -1,9 +1,8 @@
-# 📦 Streamlit App Starter Kit 
+# 📦 Streamlit Stock Demo App
 ```
 ⬆️ (Replace above with your app's name)
 ```
-
-Description of the app ...
+A basic visualization demo of stocks using local MySql database.
 
 ## Demo App
 
@@ -22,4 +21,3 @@ This is filler text, please replace this with text for this section.
 This is filler text, please replace this with a explanatory text about further relevant resources for this repo
 - Resource 1
 - Resource 2
-- Resource 3
