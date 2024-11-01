@@ -1,6 +1,6 @@
-# 📦 Streamlit Stock Demo App
+# 🤖 Streamlit Stock Demo App
 ```
-⬆️ (Replace above with your app's name)
+⬆️  (Replace above with your app's name)
 ```
 A basic visualization demo of stocks using local MySql database.
 
