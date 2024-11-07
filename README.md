@@ -10,7 +10,7 @@ A basic visualization demo of stocks using local MySql database.
 
 ## GitHub Codespaces
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/app-starter-kit?quickstart=1)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/app-stockinfo?quickstart=1)
 
 ## Section Heading
 
