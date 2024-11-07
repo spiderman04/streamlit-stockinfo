@@ -1,0 +1,6 @@
+# ignore log files
+.log
+
+# ignore dev
+.devcontainer
+.streamlit
