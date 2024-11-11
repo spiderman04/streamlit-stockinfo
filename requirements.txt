@@ -1,3 +1,5 @@
-streamlit
+finplot
+os
 pandas
+streamlit
 yfinance
