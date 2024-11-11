@@ -1,7 +1,7 @@
 
 import pandas as pd
 import streamlit as st
-import yfinance as yf
+import yfinance
 
 STOCK_INPUT_FILENAME1 = "nasdaq_top100.csv"
 PROPS_DEMOGRAPHICS = ['address1', 'address2', 'city', 'country','fullTimeEmployees'
