@@ -86,3 +86,15 @@ tab4.divider()
 for item in PROPS_AVERAGE_PRICING:
     tab4.write("\t" + item +"=" + str(result.info.get(item)))
 tab4.divider()
+
+tab5.write("Risk Data")
+tab5.divider()
+for item in PROPS_RISK_INFO:
+    tab5.write("\t" + item + "=" + str(result.info.get(item)))
+tab5.divider()
+
+tab6.write("Graphs")
+tab6.divider()
+df = yfinance.Ticker(selected).history(period='6mo')
+tab6.line_chart(df)
+tab6.divider()
