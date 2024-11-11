@@ -1,5 +1,4 @@
 finplot
-os
 pandas
 streamlit
 yfinance
