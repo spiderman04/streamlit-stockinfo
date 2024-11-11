@@ -1,6 +1,38 @@
+import os
+import pandas as pd
 import streamlit as st
 import yfinance as yf
 
+STOCK_INPUT_FILENAME1 = "nasdaq_top100.csv"
+PROPS_DEMOGRAPHICS = ['address1', 'address2', 'city', 'country','fullTimeEmployees'
+    , 'industry','longBusinessSummary','phone', 'sector','state', 'website','zip'
+]
+PROPS_AVERAGE_PRICING = ['averageDailyVolume10Day','averageVolume','averageVolume10days'
+    , 'currentPrice', 'dayHigh', 'dayLow', 'longName', 'marketCap', 'open', 'previousClose'
+    , 'shortName', 'symbol', 'targetHighPrice', 'targetLowPrice', 'targetMeanPrice',
+    'targetMedianPrice', 'underlyingSymbol', 'volume'
+]
+PROPS_RISK_INFO = ['auditRisk','boardRisk','compensationRisk','overallRisk',
+    'recommendationKey','shareHolderRightsRisk'
+]
+
+def get_symbols_from_file():
+    symbols_list = []
+    df = pd.read_csv(STOCK_INPUT_FILENAME1, header=0, names=['Id', 'Symbol', 'Name'])
+    symbols = df['Symbol']
+    for symbol in symbols:
+        # ignore these symbol names
+        try:
+            if symbol is not float:
+                if not (symbol.__contains__(":INDEX")):
+                    symbols_list.append(symbol)
+                else:
+                    print("Ignoring INDEX symbols...")
+        except AttributeError:
+            print("An attribute error has occurred, ignoring symbol" + str(symbol))
+            pass
+    return symbols_list
+    
 with st.sidebar:
     selected = st.text_input("Enter a stock symbol")
     # start_date = st.date_input("Enter Start Date")
