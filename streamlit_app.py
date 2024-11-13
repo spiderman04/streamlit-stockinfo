@@ -34,7 +34,7 @@ def get_symbols_from_file():
     return symbols_list
     
 with st.sidebar:
-    selected = st.text_input("Enter a stock symbol")
+    # selected = st.text_input("Enter a stock symbol")
     # start_date = st.date_input("Enter Start Date")
     # start_date = st.date_input("Enter End Date")
 
