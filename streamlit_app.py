@@ -42,8 +42,10 @@ with st.sidebar:
     selected = st.selectbox("Pick One*", sorted(symbol_list))
     st.text("*NOTE: Overrides the Symbol field above.")
 
-    # debug st.text("You entered: " + str(selected))
-    # st.text("Date entered: " + str(start_date))
+    openChecked = st.checkbox("Open",value=True)
+    closeChecked = st.checkbox("Previous Close",value=True)
+    volumeChecked = st.checkbox("Volume",value=True)
+    avgVolChecked = st.checkbox("Average Volume",value=True)
 
 st.title("Simple Stock Info Site")
 
